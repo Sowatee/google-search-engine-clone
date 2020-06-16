@@ -1,6 +1,7 @@
 body {
     margin: 0;
     padding: 0;
+    font-size: 14px;
 }
 
 a {
@@ -15,22 +16,43 @@ a:hover {
 .grid-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 0.2fr 2.6fr 0.2fr;
+    grid-template-rows: 0.2fr 2.6fr 0.13fr;
     gap: 1px 1px;
     grid-template-areas: "header header header header" "main main main main" "footer footer footer footer";
     width: 100vw;
     height: 100vh;
 }
-  
+
+/* Header Content */
+
 header { 
     grid-area: header; 
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: .9em;
 }
+
+.header-left {
+    width: 9vw;
+    display: flex;
+    justify-content: space-around;
+}
+
+.header-right {
+    width: 20vw;
+    display: flex;
+    justify-content: space-around;
+}
+
+/* Logo, Search Bar, and Buttons */
+
 main {
     grid-area: main;
   
 }
 
+/* Footer Content */
 
 footer { 
     grid-area: footer;
@@ -38,13 +60,18 @@ footer {
     background-color: #f2f2f2;
     justify-content: space-between;
     align-items: center;
-}
-
-.footer-left {
-    align-items: flex-start;
+    font-size: .9em;
     
 }
 
+.footer-left {
+   width: 20vw;
+   display: flex;
+   justify-content: space-around;
+}
+
 .footer-right {
-    align-items: flex-end;
+    width: 20vw;
+    display: flex;
+    justify-content: space-around;
 }
